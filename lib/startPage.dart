@@ -17,20 +17,25 @@ class StartPage extends StatelessWidget {
                 Text('Das kleine Gespenst im Museum',
                     style: TextStyle(fontFamily: 'Pixellari')),
                 Image.asset('assets/images/ghost_right.png', scale: 0.2),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Starten',
-                    style: TextStyle(fontFamily: 'Pixellari'),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.lime)),
-                ),
+                Container(
+                    width: 102,
+                    height: 40,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Row(
+                        children: [
+                          Icon(Icons.play_arrow),
+                          Text("Starten",
+                              style: TextStyle(fontFamily: 'Pixellari'))
+                        ],
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.lime)),
+                    )),
                 FloatingActionButton(
                     child: Icon(Icons.info),
                     onPressed: () {
-                      debugPrint('movieTitle');
                       Navigator.pushNamed(context, AppRoutes.info);
                     },
                     backgroundColor: Colors.blue,
