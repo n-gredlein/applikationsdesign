@@ -94,6 +94,6 @@ flutter:
 
 
   fonts:
-    - family: Schyler
+    - family: Pixellari
       fonts:
         - asset: assets/fonts/Pixellari.ttf
