@@ -37,14 +37,14 @@ class StartPage extends StatelessWidget {
                               MaterialStateProperty.all<Color>(Colors.lime)),
                     )),
                 FloatingActionButton(
-                    child: Icon(
-                      Icons.info,
-                      size: 50,
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, AppRoutes.info);
-                    },
-                    elevation: 0.0),
+                  child: Icon(
+                    Icons.info,
+                    size: 50,
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.info);
+                  },
+                ),
               ],
             ))));
   }

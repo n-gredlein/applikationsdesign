@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_kagan_gredlein/StartPage.dart';
 import 'package:flutter_application_kagan_gredlein/InfoPage.dart';
+import 'package:flutter_application_kagan_gredlein/PausePage.dart';
 import 'package:flutter_application_kagan_gredlein/app_routes.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
             button: TextStyle(fontSize: 20.0),
           ),
           floatingActionButtonTheme: FloatingActionButtonThemeData(
-              backgroundColor: Colors.transparent),
+              backgroundColor: Colors.transparent, elevation: 0.0),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
@@ -46,6 +47,8 @@ class MyApp extends StatelessWidget {
         return buildRoute(StartPage(), settings: settings);
       case AppRoutes.info:
         return buildRoute(InfoPage(), settings: settings);
+      case AppRoutes.pause:
+        return buildRoute(PausePage(), settings: settings);
       default:
         return null;
     }
