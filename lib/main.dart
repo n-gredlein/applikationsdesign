@@ -18,10 +18,25 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: getInitialRoute(),
-        onGenerateRoute: (route) => getRoute(route),
-      );
+      debugShowCheckedModeBanner: false,
+      initialRoute: getInitialRoute(),
+      onGenerateRoute: (route) => getRoute(route),
+      theme: ThemeData(
+          fontFamily: 'Pixellari',
+          textTheme: const TextTheme(
+            headline1: TextStyle(fontSize: 50.0, color: Colors.white),
+            headline2: TextStyle(fontSize: 20.0, color: Colors.white),
+            bodyText2:
+                TextStyle(fontSize: 16.0, fontFamily: 'OpenSans-Regular'),
+            button: TextStyle(fontSize: 20.0),
+          ),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+              backgroundColor: Colors.transparent),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
+          ))));
 
   String getInitialRoute() => AppRoutes.start;
 

@@ -16,26 +16,20 @@ class StartPage extends StatelessWidget {
               children: [
                 Text('DAS KLEINE GESPENST',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontFamily: 'Pixellari',
-                        fontSize: 50,
-                        color: Colors.white)),
-                Text('IM MUSEUM',
-                    style: TextStyle(
-                        fontFamily: 'Pixellari',
-                        fontSize: 20,
-                        color: Colors.white)),
-                Image.asset('assets/images/ghost_right.png', scale: 0.2),
+                    style: Theme.of(context).textTheme.headline1),
+                Text('IM MUSEUM', style: Theme.of(context).textTheme.headline2),
+                Image.asset('assets/images/ghost_right.png', scale: 0.15),
                 Container(
-                    width: 102,
-                    height: 40,
+                    width: 121,
+                    height: 50,
                     child: ElevatedButton(
                       onPressed: () {},
                       child: Row(
                         children: [
                           Icon(Icons.play_arrow),
-                          Text("Starten",
-                              style: TextStyle(fontFamily: 'Pixellari'))
+                          Text(
+                            "Starten",
+                          )
                         ],
                       ),
                       style: ButtonStyle(
@@ -45,12 +39,11 @@ class StartPage extends StatelessWidget {
                 FloatingActionButton(
                     child: Icon(
                       Icons.info,
-                      size: 30,
+                      size: 50,
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, AppRoutes.info);
                     },
-                    backgroundColor: Colors.transparent,
                     elevation: 0.0),
               ],
             ))));

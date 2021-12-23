@@ -22,12 +22,7 @@ class InfoPage extends StatelessWidget {
                         color: Colors.white,
                         size: 50,
                       ),
-                      Text("INFO",
-                          style: TextStyle(
-                            fontFamily: 'Pixellari',
-                            fontSize: 50,
-                            color: Colors.white,
-                          ))
+                      Text("INFO", style: Theme.of(context).textTheme.headline1)
                     ]))),
                 Container(
                   width: 300,
@@ -38,17 +33,17 @@ class InfoPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                    width: 128,
-                    height: 40,
+                    width: 158,
+                    height: 50,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pop(context, true);
                       },
                       child: Row(
                         children: [
-                          Icon(Icons.check),
                           Text("Verstanden",
-                              style: TextStyle(fontFamily: 'Pixellari'))
+                              style: TextStyle(fontFamily: 'Pixellari')),
+                          Icon(Icons.check),
                         ],
                       ),
                       style: ButtonStyle(
