@@ -23,7 +23,9 @@ class StartPage extends StatelessWidget {
                     width: 121,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoutes.game);
+                      },
                       child: Row(
                         children: [
                           Icon(Icons.play_arrow),

@@ -23,7 +23,9 @@ class PausePage extends StatelessWidget {
                         width: 150,
                         height: 50,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRoutes.game);
+                          },
                           child: Row(
                             children: [
                               Icon(Icons.play_arrow),
