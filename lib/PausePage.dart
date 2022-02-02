@@ -1,77 +1,64 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_kagan_gredlein/app_routes.dart';
+
+import 'app_routes.dart';
 
 class PausePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: const AssetImage("assets/images/background.jpg"),
+                    image: AssetImage("assets/images/background.jpg"),
                     fit: BoxFit.cover)),
             child: Center(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('PAUSE',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1),
+                Text('PAUSE', textAlign: TextAlign.center, style: Theme.of(context).textTheme.headline1),
                 Column(
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                         width: 150,
                         height: 50,
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, AppRoutes.game);
-                          },
+                          onPressed: () => Navigator.pop(context),
                           child: Row(
-                            children: [
+                            children: const [
                               Icon(Icons.play_arrow),
-                              Text(
-                                "Fortsetzen",
-                              )
+                              Text("Fortsetzen",),
                             ],
                           ),
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.lime)),
+                          style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.lime)),
                         )),
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                    ),
-                    Container(
+                    const Padding(padding: EdgeInsets.all(8.0),),
+                    SizedBox(
                         width: 153,
                         height: 50,
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, AppRoutes.start);
-                          },
+                          onPressed: () => Navigator.pushNamed(context, AppRoutes.start),
                           child: Row(
-                            children: [
+                            children: const [
                               Icon(Icons.close),
-                              Text(
-                                "Abbrechen",
-                              )
+                              Text("Abbrechen",)
                             ],
                           ),
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.red)),
+                          style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
                         ))
                   ],
                 ),
                 FloatingActionButton(
-                  child: Icon(
+                  child: const Icon(
                     Icons.info,
                     size: 50,
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, AppRoutes.info);
-                  },
+                  onPressed: () => Navigator.pushNamed(context, AppRoutes.info),
                 ),
               ],
-            ))));
+            ))
+        )
+    );
   }
+
 }

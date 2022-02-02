@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/museum_tiles/BuildConfig.java
+ com.example.museum_tiles.BuildConfig

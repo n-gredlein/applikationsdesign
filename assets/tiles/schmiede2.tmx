@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="museum_tiles" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="museum_tiles.png" width="320" height="320"/>
+ </tileset>
+ <tileset firstgid="101" name="grain" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="grain.png" width="96" height="96"/>
+ </tileset>
+ <layer id="1" name="maze" width="40" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzllsEKgkAQhoewm+jJziZYaEFp3RLf/7Gcg0vTMJYuM7Dp4YOd3QE//h3RCgAqRWrkoUiORMh+XFOk/alex9PAL0FS4VnS/lSvld+V8RL2fnEkfj3ozkrmwY5RCDnyOVhau7uw8qNzUJL6jJy+nFv4XeDzvjvGjawb5I60Y92y8w7eM8P9Dp5+FhSK+WkRB+5HPUP2Cz0/Xz/3/oTq55NfvLB/zfer5Tcn03/Lb+63Q/LT/J9yaOa3Zb8B+WdHSg==
+  </data>
+ </layer>
+ <layer id="4" name="grain" width="40" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2B4g6yBdsAoGAVDBFCaV6iV11KBOI1MMXwglxJHIYEMIM4kU4weIBuIc8gUG45gsNcB1EqXo2AUDCUAAHkMCdw=
+  </data>
+ </layer>
+</map>

@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_kagan_gredlein/app_routes.dart';
+
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+
+import 'app_routes.dart';
 
 class CustomYoutubePlayer extends StatefulWidget {
   final String? youtubeURL;
@@ -49,9 +51,9 @@ class FinishPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: const AssetImage("assets/images/background.jpg"),
+                    image: AssetImage("assets/images/background.jpg"),
                     fit: BoxFit.cover)),
             child: Center(
                 child: Column(
@@ -60,21 +62,20 @@ class FinishPage extends StatelessWidget {
                 Image.asset('assets/images/star.png', scale: 0.2),
                 Text('DU HAST ES GESCHAFFT!',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1),
-                CustomYoutubePlayer(
-                    'https://www.youtube.com/watch?v=5hvcNXN5OXw&t=27s'),
-                Container(
-                    width: 199,
+                    style: Theme.of(context).textTheme.headline2),
+                const CustomYoutubePlayer('https://youtu.be/GxtYB-Wd-YU'),
+                SizedBox(
+                    width: 213,
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRoutes.game);
+                        Navigator.pushNamed(context, AppRoutes.start);
                       },
                       child: Row(
-                        children: [
+                        children: const [
                           Icon(Icons.play_arrow),
                           Text(
-                            "Nochmal spielen",
+                            "Zurück zum Start",
                           )
                         ],
                       ),

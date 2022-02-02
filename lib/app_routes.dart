@@ -4,4 +4,5 @@ class AppRoutes {
   static const pause = '/pause';
   static const game = '/game';
   static const finish = '/finish';
+  static const settings = '/settings';
 }
